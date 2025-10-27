@@ -16,24 +16,18 @@
     }
 
     body {
-      background-color: #a3c6d2;
+      background-color: rgb(167, 195, 222);
       color: #333;
       text-align: center;
     }
 
-    .hero2 {
-      position: relative;
+    .hero, .hero2, .hero3 {
+      display: block;
       width: 100%;
-      height: auto;
-      background: url("./Tekst pasusa.png") center contain no-repeat;
-    }
-
-    .hero3 {
+      margin: 0;
+      padding: 0;
       position: relative;
-      width: 100%;
-      height: 60vh;
-      margin-top: 0;
-      background: url("./3.png") center/cover no-repeat;
+      line-height: 0;
     }
 
     .content {
@@ -63,7 +57,7 @@
     }
 
     .countdown {
-      padding-top: 3%;
+      transform: translateY(50%);
       display: flex;
       justify-content: space-evenly;
       gap: 15px;
@@ -126,6 +120,7 @@
         <small>Секунди</small>
       </div>
     </div>
+  <img src="./3.png" alt="" class="responsive-img">
   </div>
   </div>
 
