@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAKOB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #a3c6d2;
+      color: #333;
+      text-align: center;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("./Image-to-Image-AI-Smart-AI-Image-Generator-from-Images-Artlist-10-27-2025_01_20_AM.png") center/cover no-repeat;
+    }
+    .hero2 {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("./Tekst pasusa.png") center/cover no-repeat;
+    }
+
+    .hero3 {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      margin-top: 0;
+      background: url("./3.png") center/cover no-repeat;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: #3a6ea5;
+    }
+
+    h1 {
+      color: #3a6ea5;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      position: absolute;
+      top: 2%;
+      left: 50%;
+      color: rgb(0, 83, 156);
+      font-size: 8em;
+      font-family: 'Baloo 2';
+      text-shadow:  1px 1px 0 #a0d8ff,
+    2px 2px 0 #90c8ff,
+    3px 3px 0 #80b8ff,
+    4px 4px 0 #70a8ff,
+    5px 5px 8px rgba(0,0,0,0.3);
+  transform: skewY(-2deg) rotate(-5deg) translate(-50%);
+    }
+
+    .countdown {
+      padding-top: 3%;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 15px;
+    }
+
+    .time-box {
+      text-align: center;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 3.5em;
+      line-height: 1em;
+      font-weight: bold;
+      color: #6198d3;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    .time-box small {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6198d3;
+      font-family: 'Baloo 2', cursive;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1 class="title">JAKOB</h1>
+  </div>
+  <div class="hero2">
+  </div>
+<div class="hero3">
+    <div class="countdown">
+      <div class="time-box">
+        <span id="days">00</span>
+        <small>Дена</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <small>Часот</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <small>Минути</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <small>Секунди</small>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    // 💫 Postavi datum događaja
+    const countDownDate = new Date("Nov 7, 2025 18:30:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".countdown").innerHTML = "<p>🎉 Danas je dan slavlje! 🎉</p>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
